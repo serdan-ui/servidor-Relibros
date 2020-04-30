@@ -18,4 +18,9 @@ app.use(cors());
 //registrar rutas de proyecto
 app.use("/api", router);
 
-app.listen(8080, console.log("servicio iniciado en puerto 8080"));
+
+const port = process.env.PORT || 4000;
+
+app.listen(port, '0.0.0.0' ,  () => {
+    console.log(`El servidor esta funcionando en el puerto ${port}`)
+});
