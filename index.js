@@ -6,6 +6,7 @@ const connection = require("./config/dataBase");
 
 const router = require("./routes");
 
+//inicia app 
 const app = express();
 connection();
 
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //registrar rutas de proyecto
+
 app.use("/api", router);
 
 

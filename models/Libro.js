@@ -14,25 +14,23 @@ const libroSchema = new Schema({
         required:true,
         trim:true
     },
-    autor:{
-        type:String,
-        required:true,
-        trim:true
-    },
-    descripcion:{
+    publicado:{
         type:String,
         required:true,
         trim:true
     },
     imagen:{
         type:String,
-        
         trim:true
     },
     creado:{
         type:Date,
         default:Date.now(),
 
+    },
+    autor:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Autor'
     }
 
 });

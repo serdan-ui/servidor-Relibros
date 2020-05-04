@@ -3,6 +3,7 @@ const router = express.Router();
 
 
 //ruta raiz
+//ruta /api
 router.get("/", function ( req, res ) {
 
     return res.send("Hola rolling desde Express");
@@ -12,7 +13,9 @@ router.get("/", function ( req, res ) {
 
     //RUTAS SECUNDARIAS
 
-    router.use("/libros" ,require('./libros'))
+    router.use("/libros" ,require('./libros'));
+    router.use("/autores" ,require('./autores'));
+
 
 
 
